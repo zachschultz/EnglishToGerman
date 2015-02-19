@@ -1,0 +1,16 @@
+Fun Spaß m
+Hello Hallo 0
+Good Guten 0
+Bye Tschüss 0
+Engineer Ingenieru m
+Mechanic Mechatroniker m  
+Actor Schauspieler m
+Student Student m
+Journalist Journalistin f
+Hairstylist Friserurin f
+Architect Architektin f
+Secretary Sekretärin f
+Doctor Ärztin f
+Teacher Lehrer m
+Merchant Verkäufer m
+Waitress Kellnerin f 

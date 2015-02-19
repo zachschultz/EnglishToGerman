@@ -1,3 +1,5 @@
+package me.zachschultz.englishtogerman;
+
 class Word {
 	private String englishWord;
 	private String germanWord;

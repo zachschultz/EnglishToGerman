@@ -1,3 +1,5 @@
+package me.zachschultz.englishtogerman;
+
 import java.util.*;
 public class WordOutput {
 
@@ -105,25 +107,34 @@ public class WordOutput {
 
 			Scanner similarWordScanner = new Scanner(System.in);
 
-			int wantedWord = similarWordScanner.nextInt();
-			String theWord = similarWordArr[wantedWord];
-			// REFACTOR THIS
-
-				Word wordObj = dictionary.get(theWord);
+			/* Case 1: User wants to look at a similar word */
+			if (similarWordScanner.hasNextInt()) {
+				int indexOfWantedWork = similarWordScanner.nextInt();
+				String wantedWord = similarWordArr[indexOfWantedWork];
+		
+				Word wordObj = dictionary.get(wantedWord);
 
 				String germanWord = wordObj.getGermanWord();
 				String englishWord = wordObj.getEnglishWord();
 				String gender = wordObj.getGender();
 
-			// Case 1.b: Input is German
-				if (theWord.equalsIgnoreCase(germanWord)) {
+				// Case 1.b: Input is German
+				if (wantedWord.equalsIgnoreCase(germanWord)) {
 					printEnglishWordInfo(germanWord, englishWord, gender);
 				}
 				// Case 1.c: Input was in English
 				else {
 					printGermanWordInfo(germanWord, englishWord, gender);
 				}
-
+			}
+			/* Case 2: User just wants to enter a different word */
+			else if (similarWordScanner.hasNext()){
+				String enteredWord = similarWordScanner.next();
+				outputWordInfo(enteredWord);
+			} else {
+				System.out.println("BAD ERROR UH OH");
+			}
+			
 			return;
 		}
 }
