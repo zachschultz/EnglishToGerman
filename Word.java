@@ -1,7 +1,7 @@
 class Word {
 	private String englishWord;
 	private String germanWord;
-	private char gender; // m - masculine, f - feminine, n - neutral, na - no gender
+	private char gender; // m - masculine, f - feminine, n - neutral, 0 - no gender
 
 	Word() {
 		englishWord = null;
@@ -24,12 +24,13 @@ class Word {
 	}
 
 	public String getGender() {
-		if (this.gender == 'm') return "Der";
-		else if (this.gender == 'f') return "Die";
-		else if (this.gender == 'n') return "Das";
-
-		else return "N/A";
-
-
+		if (this.gender == 'm') 
+			return "Der";
+		else if (this.gender == 'f') 
+			return "Die";
+		else if (this.gender == 'n') 
+			return "Das";
+		else 
+			return "N/A";
 	}
 }
