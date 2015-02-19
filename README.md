@@ -3,6 +3,7 @@
 This is just a fun little project I'm working on while I'm here in Germany.
 
 It lets the user enter a word in English or German then returns the equivalent in the opposite language, including the gender-related article if in German.
+- The word database (wordDatabase.txt) is *extremely* limited (I am literally just going through and adding more as I please).
 
 ## Ideas I would like to implement
 - If the word cant be found (and is then assumed to be misspelled), I want the program to smartly run through the dictionary and return alternatives.
